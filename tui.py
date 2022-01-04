@@ -135,6 +135,11 @@ def total_records(num_records):
     :return: Does not return anything
     """
     # TODO: Your code here
+
+    num_records = {}
+    x = len(num_records)
+    print (f"There are {x} records in the data set")
+
     pass
 
 
