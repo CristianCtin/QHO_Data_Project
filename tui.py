@@ -138,7 +138,7 @@ def total_records(num_records):
 
     num_records = {}
     x = len(num_records)
-    print (f"There are {x} records in the data set")
+    print(f"There are {x} records in the data set")
 
     pass
 
@@ -153,6 +153,9 @@ def serial_number():
     :return: the serial number for a record
     """
     # TODO: Your code here
+
+
+
     pass
 
 
