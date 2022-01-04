@@ -41,8 +41,9 @@ def error(msg):
     """
     # TODO: Your code here
 
+    msg = ""
+    print(f"Error! {msg}")
 
-    print("Error!", msg)
 
     pass
 
