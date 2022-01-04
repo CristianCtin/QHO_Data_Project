@@ -1,8 +1,8 @@
 from tui import *
 
 
-#welcome()
+welcome()
 #error(msg)
 #progress()
 #menu(variant=0)
-total_records(num_records)
+#total_records(num_records)

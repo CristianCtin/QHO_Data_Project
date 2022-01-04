@@ -20,7 +20,9 @@ def welcome():
     """
     # TODO: Your code here
 
-    print("Welcome")
+    print("#######################")
+    print("COVID-19 (January) Data")
+    print("#######################")
 
     pass
 
