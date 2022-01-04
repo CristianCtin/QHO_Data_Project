@@ -19,8 +19,12 @@ def welcome():
     :return: Does not return anything.
     """
     # TODO: Your code here
+
+    print("Welcome")
+
     pass
-print("message")
+
+
 
 def error(msg):
     """
@@ -34,7 +38,12 @@ def error(msg):
     :return: does not return anything
     """
     # TODO: Your code here
+
+
+    print("Error!", msg)
+
     pass
+
 
 
 def progress(operation, value):
@@ -56,6 +65,10 @@ def progress(operation, value):
     :return: does not return anything
     """
     # TODO: Your code here
+
+    for i in range(0, 100):
+        print(f'{i}')
+
     pass
 
 
@@ -90,6 +103,21 @@ def menu(variant=0):
     :return: nothing if invalid selection otherwise an integer for a valid selection
     """
     # TODO: Your code here
+
+    print("Menu:\n1 = Process Data\n2 = Visualise Data\n3 = Export Data\n4 = Exit ")
+    opt = int(input())
+    if opt == 1:
+        print("\n1 = Record by Serial Number\n2 = Records by Observation Date\n3 = Group Records by Country/Region\n4 = Summarise Records")
+    elif opt == 2:
+        print("\n1 = Country/Region Pie Chart\n2 = Observations Chart\n3 = Animated Summary")
+    elif opt == 3:
+        print("\n1 = All Data\n2 = Data for Specific Country/Region")
+    elif opt == 4:
+        print("Exit")
+    else:
+        print("Invalid option")
+        return opt
+
     pass
 
 
