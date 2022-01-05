@@ -41,7 +41,7 @@ def error(msg):
     """
     # TODO: Your code here
 
-    msg = ""
+    msg = "error_msg"
     print(f"Error! {msg}")
 
 
@@ -108,7 +108,7 @@ def menu(variant=0):
     # TODO: Your code here
 
     print("Menu:\n1 = Process Data\n2 = Visualise Data\n3 = Export Data\n4 = Exit ")
-    opt = int(input())
+    opt = int(input("Choose an option: "))
     if opt == 1:
         print("\n1 = Record by Serial Number\n2 = Records by Observation Date\n3 = Group Records by Country/Region\n4 = Summarise Records")
     elif opt == 2:
@@ -118,8 +118,8 @@ def menu(variant=0):
     elif opt == 4:
         print("Exit")
     else:
-        print("Invalid option")
-        return opt
+        print("Invalid Option. Choose number from 1 to 4")
+
 
     pass
 
@@ -157,7 +157,13 @@ def serial_number():
     """
     # TODO: Your code here
 
-
+    with open("covid_19_data.csv") as database:
+        reader = csv.reader(database)
+        Serial_No = input("Enter a serial number : ")
+        for SNo in reader:
+            if SNo[1] == Serial_No:
+                return SNo
+        print("Serial number not found!")
 
     pass
 
@@ -174,6 +180,9 @@ def observation_dates():
     :return: a list of observation dates
     """
     # TODO: Your code here
+
+
+
     pass
 
 

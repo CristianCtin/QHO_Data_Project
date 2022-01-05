@@ -2,7 +2,8 @@ from tui import *
 
 
 #welcome()
-error(msg)
+#error(msg)
 #progress()
 #menu(variant=0)
-#total_records(num_records)
+#total_records('num_records')
+#serial_number()
