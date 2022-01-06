@@ -181,9 +181,13 @@ def observation_dates():
     """
     # TODO: Your code here
 
+    obs_type = input("Enter the observation date(mm/dd/yyy): ")
+    obs_list = []
+    format = "%m/%d/%Y"
+    for observation_dates in obs_list:
+        if
 
-
-    pass
+pass
 
 
 def display_record(record, cols=None):
@@ -241,4 +245,3 @@ def display_records():
     :return: Does not return anything
     """
     # TODO: Your code here
-welcome()

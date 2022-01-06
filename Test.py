@@ -6,4 +6,4 @@ from tui import *
 #progress()
 #menu(variant=0)
 #total_records('num_records')
-#serial_number()
+serial_number()
