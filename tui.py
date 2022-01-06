@@ -20,11 +20,12 @@ def welcome():
     """
     # TODO: Your code here
 
-    print("#######################")
-    print("COVID-19 (January) Data")
-    print("#######################")
+    message = "- COVID-19 (January) Data -"
+    print("-" * (len(message)))
+    print(message)
+    print("-" * (len(message)))
 
-    pass
+
 
 
 
@@ -41,11 +42,11 @@ def error(msg):
     """
     # TODO: Your code here
 
-    msg = "error_msg"
-    print(f"Error! {msg}")
+
+    print("Error! {}.".format(msg))
 
 
-    pass
+
 
 
 
@@ -69,10 +70,17 @@ def progress(operation, value):
     """
     # TODO: Your code here
 
-    for i in range(0, 100):
-        print(f'{i}')
 
-    pass
+    for value in range(0, 101):
+        if value == 0:
+            print("{} has started.".format(operation))
+        elif 1 <= value <= 99:
+            print("{} is in progres. {}% completed".format(operation, value))
+        else:
+            print("Operation completed")
+progress("Loading", "value")
+
+
 
 
 def menu(variant=0):
@@ -116,7 +124,7 @@ def menu(variant=0):
     elif opt == 3:
         print("\n1 = All Data\n2 = Data for Specific Country/Region")
     elif opt == 4:
-        print("Exit")
+        return x
     else:
         print("Invalid Option. Choose number from 1 to 4")
 
