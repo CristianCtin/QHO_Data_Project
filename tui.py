@@ -20,7 +20,7 @@ def welcome():
     """
     # TODO: Your code here
 
-    message = "- COVID-19 (January) Data -"
+    message = " - COVID-19 (January) Data - "
     print("-" * (len(message)))
     print(message)
     print("-" * (len(message)))
