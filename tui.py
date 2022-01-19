@@ -167,7 +167,7 @@ def serial_number():
 
     with open("covid_19_data.csv") as database:
         reader = csv.reader(database)
-        Serial_No = input("Enter a serial number : ")
+        Serial_No = input("Enter a serial number :")
         for SNo in reader:
             if SNo[1] == Serial_No:
                 return SNo
