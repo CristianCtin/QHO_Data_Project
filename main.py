@@ -8,7 +8,7 @@ Note:   any user input/output should be done using the appropriate functions in 
         any processing should be done using the appropriate functions in the module 'process'
         any visualisation should be done using the appropriate functions in the module 'visual'
 """
-tui.welcome()
+
 """
 
 # Task 10: Import required modules

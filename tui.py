@@ -75,7 +75,7 @@ def progress(operation, value):
         if value == 0:
             print("{} has started.".format(operation))
         elif 1 <= value <= 99:
-            print("{} is in progres. {}% completed".format(operation, value))
+            print("{} is in progress. {}% completed".format(operation, value))
         else:
             print("Operation completed")
 progress("Loading", "value")
@@ -191,7 +191,7 @@ def observation_dates():
 
     obs_type = input("Enter the observation date(mm/dd/yyy): ")
     obs_list = []
-    format = "%m/%d/%Y"
+    observation_dates = "%m/%d/%Y"
     for observation_dates in obs_list:
         if
 
