@@ -124,7 +124,7 @@ def menu(variant=0):
     elif opt == 3:
         print("\n1 = All Data\n2 = Data for Specific Country/Region")
     elif opt == 4:
-        return x
+        break
     else:
         print("Invalid Option. Choose number from 1 to 4")
 
@@ -189,12 +189,7 @@ def observation_dates():
     """
     # TODO: Your code here
 
-    #with open("covid_19_data.csv") as database:
-        #reader = csv.reader(database)
-        #obs_dates = input("Enter observation dates (mm/dd/yyy): ")
-        #obs_dates = "%m/%d/%Y"
-       # for obs_dates in reader:
-           # return obs_dates[]
+
 
 
    # obs_dates = input("Enter observation dates (mm/dd/yyy): ")
@@ -204,17 +199,24 @@ def observation_dates():
             #return [dates]
     #print("Your observation dates does not exist on the list!")
 
-    from datetime import datetime
+    from datetime import date
     obs_dates = input("Enter observation dates (mm/dd/yyy): ")
-    dates = datetime
-    format = "%m/%d/%Y"
-    obs_dates = format
+    obs_dates = date.strftime("%m/%d/%Y")
     for dates in obs_dates:
         if dates[2] == obs_dates:
-            return dates
-    print("Your observation dates does not exist on the list!")
+            print(dates)
+            return
+        print("Your observation dates does not exist on the list!")
 
 
+
+    dates = [date.strftime("%m/%d/%Y")]
+    dates = input("Enter observation dates (mm/dd/yyy): ")
+    with open () as f:
+        reader = csv.reader(f)
+        for dates in reader:
+            obs_dates.append(dates)
+    return obs_dates
 
 
 
