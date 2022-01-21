@@ -125,7 +125,7 @@ def menu(variant=0):
     elif opt == 3:
         print("\n1 = All Data\n2 = Data for Specific Country/Region")
     elif opt == 4:
-        break
+        return ()
     else:
         print("Invalid Option. Choose number from 1 to 4")
 

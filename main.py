@@ -39,7 +39,7 @@ def run():
     # been loaded and that the data loading operation has completed.
     # TODO: Your code here
 
-
+    progress(operation, value)
 
 
     while True:
@@ -47,6 +47,8 @@ def run():
         # for the different operations that can be performed on the data (menu variant 0).
         # Assign the selected option to a suitable local variable
         # TODO: Your code here
+
+        options = menu(variant=0)
 
         # Task 15: Check if the user selected the option for processing data.  If so, then do the following:
         # - Use the appropriate function in the module tui to display a message to indicate that the data processing
