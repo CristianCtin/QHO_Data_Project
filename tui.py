@@ -129,7 +129,7 @@ def menu(variant=0):
         print("Invalid Option. Choose number from 1 to 4")
 
 
-    pass
+
 
 
 def total_records(num_records):
@@ -151,7 +151,7 @@ def total_records(num_records):
     x = len(num_records)
     print(f"There are {x} records in the data set")
 
-    pass
+
 
 
 def serial_number():
@@ -173,7 +173,7 @@ def serial_number():
                 return SNo
         print("Serial number not found!")
 
-    pass
+
 
 
 def observation_dates():
@@ -189,13 +189,35 @@ def observation_dates():
     """
     # TODO: Your code here
 
-    obs_type = input("Enter the observation date(mm/dd/yyy): ")
-    obs_list = []
-    observation_dates = "%m/%d/%Y"
-    for observation_dates in obs_list:
-        if
+    #with open("covid_19_data.csv") as database:
+        #reader = csv.reader(database)
+        #obs_dates = input("Enter observation dates (mm/dd/yyy): ")
+        #obs_dates = "%m/%d/%Y"
+       # for obs_dates in reader:
+           # return obs_dates[]
 
-pass
+
+   # obs_dates = input("Enter observation dates (mm/dd/yyy): ")
+    #for dates in  obs_dates:
+        #if dates == obs_dates:
+            #print (dates)
+            #return [dates]
+    #print("Your observation dates does not exist on the list!")
+
+    from datetime import datetime
+    obs_dates = input("Enter observation dates (mm/dd/yyy): ")
+    dates = datetime
+    format = "%m/%d/%Y"
+    obs_dates = format
+    for dates in obs_dates:
+        if dates[2] == obs_dates:
+            return dates
+    print("Your observation dates does not exist on the list!")
+
+
+
+
+
 
 
 def display_record(record, cols=None):
