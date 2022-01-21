@@ -229,7 +229,13 @@ def display_record(record, cols=None):
     :return: Does not return anything
     """
     # TODO: Your code here
-    pass
+
+    with open("covid_19_data.csv") as database:
+        rec = input("Enter column index:")
+        for data in record:
+            if data [1] == rec
+
+
 
 
 def display_records():
