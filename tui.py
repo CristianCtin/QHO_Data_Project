@@ -6,6 +6,7 @@ A function may also need to format and/or structure a response e.g. return a lis
 Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
+import csv
 
 
 def welcome():
@@ -189,35 +190,15 @@ def observation_dates():
     """
     # TODO: Your code here
 
-
-
-
-   # obs_dates = input("Enter observation dates (mm/dd/yyy): ")
-    #for dates in  obs_dates:
-        #if dates == obs_dates:
-            #print (dates)
-            #return [dates]
-    #print("Your observation dates does not exist on the list!")
-
     from datetime import date
-    obs_dates = input("Enter observation dates (mm/dd/yyy): ")
-    obs_dates = date.strftime("%m/%d/%Y")
-    for dates in obs_dates:
-        if dates[2] == obs_dates:
-            print(dates)
-            return
+    with open("covid_19_data.csv") as database:
+        reader = csv.reader(database)
+        dates = input("Enter observation dates (mm/dd/yyy): ")
+        x = date.strftime("%m/%d/%Y")
+        for obs_dates in reader:
+            if obs_dates[2] == dates:
+                return dates[x]
         print("Your observation dates does not exist on the list!")
-
-
-
-    dates = [date.strftime("%m/%d/%Y")]
-    dates = input("Enter observation dates (mm/dd/yyy): ")
-    with open () as f:
-        reader = csv.reader(f)
-        for dates in reader:
-            obs_dates.append(dates)
-    return obs_dates
-
 
 
 
