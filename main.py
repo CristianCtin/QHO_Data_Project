@@ -39,7 +39,7 @@ def run():
     # been loaded and that the data loading operation has completed.
     # TODO: Your code here
 
-    progress(operation, value)
+
 
 
     while True:
