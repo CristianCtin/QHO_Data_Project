@@ -21,4 +21,5 @@ print(covid_records)
 
 print(len(covid_records))
 
+
 x = input("Please select a record between 1 and {}".format(len(covid_records)))

@@ -19,6 +19,7 @@ print(len(covid_records))
 
 - Retrieve a record with the serial number as specified by the user.
 
+
 x = input("Please select a record between 1 and {}".format(len(covid_records)))
 
 - Retrieve the records for the observation dates as specified by the user.

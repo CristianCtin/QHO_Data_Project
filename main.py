@@ -81,6 +81,7 @@ def run():
 
 
 
+
         #
         #   - If the user selected the option to retrieve (multiple) records by observation dates then
         #       - Use the appropriate function in the module 'tui' to indicate that the records retrieval
