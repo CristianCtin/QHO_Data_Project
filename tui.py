@@ -253,6 +253,7 @@ def display_records():
     # TODO: Your code here
 
 
+
     if len(cols) == 0:
         print(record)
     elif len(cols) != 0:

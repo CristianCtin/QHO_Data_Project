@@ -21,6 +21,7 @@ The required functions are as follows:
 
 print(len(covid_records))
 
+
 """
 - Retrieve a record with the serial number as specified by the user.
 """

@@ -75,6 +75,7 @@ def run():
 
 
 
+
         # - Check what option has been selected
         #
         #   - If the user selected the option to retrieve an individual record by serial number then
