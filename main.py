@@ -13,8 +13,11 @@ Note:   any user input/output should be done using the appropriate functions in 
 
 import csv
 import tui
+from tui import *
 from process import *
 from visual import *
+
+
 
 # Task 11: Create an empty list named 'covid_records'.
 # This will be used to store the data read from the source data file.
@@ -66,6 +69,10 @@ def run():
         # - Use the appropriate function in the module 'tui' to display a menu of options for processing the data
         # (menu variant 1).
 
+        if option == 1:
+            tui.progress("Operation has started", 0)
+            tui.progress("Operation has completed", 101)
+
 
 
         # - Check what option has been selected
@@ -90,7 +97,9 @@ def run():
         #       - Use the appropriate function in the module 'tui' to display the retrieved records.
         #       - Use the appropriate function in the module 'tui' to indicate that the records retrieval
         #       process has completed.
-        #
+
+
+
         #   - If the user selected the option to group records by country/region then
         #       - Use the appropriate function in the module 'tui' to indicate that the grouping
         #       process has started.
@@ -98,7 +107,10 @@ def run():
         #       - Use the appropriate function in the module 'tui' to display the groupings.
         #       - Use the appropriate function in the module 'tui' to indicate that the grouping
         #       process has completed.
-        #
+
+
+
+
         #   - If the user selected the option to summarise the records then
         #       - Use the appropriate function in the module 'tui' to indicate that the summary
         #       process has started.

@@ -64,11 +64,11 @@ def progress(operation, value):
 
     # for value in range(0, 101):
     if value == 0:
-        print("{} has started.".format(operation))
+        print("{} has started!".format(operation))
     elif 1 <= value <= 99:
         print("{} is in progress. {}% completed".format(operation, value))
     else:
-        print("Operation completed")
+        print("Operation completed!")
 
 
 def menu(variant=0):
@@ -106,7 +106,10 @@ def menu(variant=0):
     variant = int(input("Choose an option: "))
 
     if variant == 0:
-        print("Menu:\n1 = Process Data\n2 = Visualise Data\n3 = Export Data\n4 = Exit ")
+        print("Menu:\n1 = Process Data"
+              "\n2 = Visualise Data"
+              "\n3 = Export Data"
+              "\n4 = Exit ")
     elif variant == 1:
         print("\n1 = Record by Serial Number"
               "\n2 = Records by Observation Date"
