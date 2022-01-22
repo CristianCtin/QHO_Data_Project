@@ -8,12 +8,11 @@ Note:   any user input/output should be done using the appropriate functions in 
         any visualisation should be done using the appropriate functions in the module 'visual'
 """
 
-
-
 # Task 10: Import required modules
 # TODO: Your code here
 
-from tui import *
+import csv
+import tui
 from process import *
 from visual import *
 
@@ -23,12 +22,13 @@ from visual import *
 
 covid_records = []
 
+
 def run():
     # Task 12: Call the function welcome of the module 'tui'.
     # This will display our welcome message when the program is executed.
     # TODO: Your code here
 
-    welcome()
+    tui.welcome()
 
     # Task 13: Load the data.
     # - Use the appropriate function in the module 'tui' to display a message to indicate that the data loading
@@ -39,8 +39,13 @@ def run():
     # been loaded and that the data loading operation has completed.
     # TODO: Your code here
 
-
-
+    tui.progress("Loading the Data", 0)
+    with open("data/covid_19_data.csv") as database:
+        csv_reader = csv.reader(database)
+        header = next(csv_reader)
+        for line in csv_reader:
+            covid_records.append(line)
+    tui.progress("Loading the Data", 100)
 
     while True:
         # Task 14: Using the appropriate function in the module 'tui', display a menu of options
@@ -48,7 +53,7 @@ def run():
         # Assign the selected option to a suitable local variable
         # TODO: Your code here
 
-        options = menu(variant=0)
+        option = tui.menu(variant=0)
 
         # Task 15: Check if the user selected the option for processing data.  If so, then do the following:
         # - Use the appropriate function in the module tui to display a message to indicate that the data processing
@@ -60,6 +65,9 @@ def run():
         # To process the data, do the following:
         # - Use the appropriate function in the module 'tui' to display a menu of options for processing the data
         # (menu variant 1).
+
+
+
         # - Check what option has been selected
         #
         #   - If the user selected the option to retrieve an individual record by serial number then
@@ -69,6 +77,10 @@ def run():
         #       display it.
         #       - Use the appropriate function in the module 'tui' to indicate that the record retrieval process has
         #       completed.
+
+
+
+
         #
         #   - If the user selected the option to retrieve (multiple) records by observation dates then
         #       - Use the appropriate function in the module 'tui' to indicate that the records retrieval
@@ -94,6 +106,12 @@ def run():
         #       - Use the appropriate function in the module 'tui' to indicate that the summary
         #       process has completed.
         # TODO: Your code here
+
+
+
+
+
+
 
         # Task 21: Check if the user selected the option for visualising data.
         # If so, then do the following:

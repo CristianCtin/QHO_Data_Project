@@ -6,7 +6,6 @@ A function may also need to format and/or structure a response e.g. return a lis
 Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
-import csv
 
 
 def welcome():
@@ -27,9 +26,6 @@ def welcome():
     print("-" * (len(message)))
 
 
-
-
-
 def error(msg):
     """
     Task 2: Display an error message.
@@ -43,12 +39,7 @@ def error(msg):
     """
     # TODO: Your code here
 
-
     print("Error! {}.".format(msg))
-
-
-
-
 
 
 def progress(operation, value):
@@ -71,17 +62,13 @@ def progress(operation, value):
     """
     # TODO: Your code here
 
-
-    for value in range(0, 101):
-        if value == 0:
-            print("{} has started.".format(operation))
-        elif 1 <= value <= 99:
-            print("{} is in progress. {}% completed".format(operation, value))
-        else:
-            print("Operation completed")
-progress("Loading", "value")
-
-
+    # for value in range(0, 101):
+    if value == 0:
+        print("{} has started.".format(operation))
+    elif 1 <= value <= 99:
+        print("{} is in progress. {}% completed".format(operation, value))
+    else:
+        print("Operation completed")
 
 
 def menu(variant=0):
@@ -116,21 +103,26 @@ def menu(variant=0):
     """
     # TODO: Your code here
 
-    print("Menu:\n1 = Process Data\n2 = Visualise Data\n3 = Export Data\n4 = Exit ")
-    opt = int(input("Choose an option: "))
-    if opt == 1:
-        print("\n1 = Record by Serial Number\n2 = Records by Observation Date\n3 = Group Records by Country/Region\n4 = Summarise Records")
-    elif opt == 2:
-        print("\n1 = Country/Region Pie Chart\n2 = Observations Chart\n3 = Animated Summary")
-    elif opt == 3:
-        print("\n1 = All Data\n2 = Data for Specific Country/Region")
-    elif opt == 4:
+    variant = int(input("Choose an option: "))
 
+    if variant == 0:
+        print("Menu:\n1 = Process Data\n2 = Visualise Data\n3 = Export Data\n4 = Exit ")
+    elif variant == 1:
+        print("\n1 = Record by Serial Number"
+              "\n2 = Records by Observation Date"
+              "\n3 = Group Records by Country/Region"
+              "\n4 = Summarise Records")
+    elif variant == 2:
+        print("\n1 = Country/Region Pie Chart"
+              "\n2 = Observations Chart"
+              "\n3 = Animated Summary")
+    elif variant == 3:
+        print("\n1 = All Data"
+              "\n2 = Data for Specific Country/Region")
+    elif variant == 4:
+        print("\nProgram closed")
     else:
         print("Invalid Option. Choose number from 1 to 4")
-
-
-
 
 
 def total_records(num_records):
@@ -153,8 +145,6 @@ def total_records(num_records):
     print(f"There are {x} records in the data set")
 
 
-
-
 def serial_number():
     """
     Task 6: Read in the serial number of a record and return the serial number.
@@ -175,8 +165,6 @@ def serial_number():
         print("Serial number not found!")
 
 
-
-
 def observation_dates():
     """
     Task 7: Read in and return a list of observation dates.
@@ -190,15 +178,14 @@ def observation_dates():
     """
     # TODO: Your code here
 
-    lista = []
+    obs_list = []
     while True:
         obs_dates = input("Enter observation dates (mm/dd/yyy) (To stop type stop): ")
         if obs_dates  != "stop" :
-            lista.append(obs_dates)
+            obs_list.append(obs_dates)
         else:
             break
-    return lista
-
+    return obs_list
 
 
 def display_record(record, cols=None):
@@ -228,12 +215,11 @@ def display_record(record, cols=None):
     """
     # TODO: Your code here
 
-    with open("covid_19_data.csv") as database:
-        rec = input("Enter column index:")
-        for data in record:
-            if data [1] == rec
-
-
+    if len(cols) == 0:
+        print(record)
+    elif len(cols) != 0:
+        for index in cols:
+            print(record[index])
 
 
 def display_records():
@@ -262,3 +248,9 @@ def display_records():
     :return: Does not return anything
     """
     # TODO: Your code here
+
+    if len(cols) == 0:
+        print(record)
+    elif len(cols) != 0:
+        for index in cols:
+            print(record[index])

@@ -14,7 +14,13 @@ required from the user to complete the processing.
 
 The required functions are as follows:
 - Retrieve the total number of records that have been loaded.
+
+print(len(covid_records))
+
 - Retrieve a record with the serial number as specified by the user.
+
+x = input("Please select a record between 1 and {}".format(len(covid_records)))
+
 - Retrieve the records for the observation dates as specified by the user.
 - Retrieve all of the records grouped by the country/region.
 - Retrieve a summary of all of the records. This should include the following information for each country/region:
