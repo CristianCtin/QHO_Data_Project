@@ -136,8 +136,6 @@ def run():
 
 
 
-
-
         # Task 21: Check if the user selected the option for visualising data.
         # If so, then do the following:
         # - Use the appropriate function in the module 'tui' to indicate that the data visualisation operation

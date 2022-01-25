@@ -40,7 +40,6 @@ x = input("Please select a record between 1 and {}".format(len(covid_records)))
     - the total number of confirmed cases
     - the total number of deaths
     - the total number of recoveries
-
  
 """
 

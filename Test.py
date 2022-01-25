@@ -16,6 +16,7 @@ import csv
 
 
 
+
 covid_records = []
 def run():
     tui.welcome()
