@@ -11,7 +11,6 @@ Each of the functions below should follow the pattern:
 - Take a list of records (where each record is a list of data values) as a parameter.
 
 
-
 - Process the list of records appropriately.  You may use the module 'tui' to retrieve any additional information 
 required from the user to complete the processing.
 
