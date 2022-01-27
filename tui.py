@@ -7,7 +7,8 @@ Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
 import csv
-from main import *
+import main
+# from main import *
 
 def welcome():
     """
@@ -150,7 +151,7 @@ def total_records(num_records):
     print(f"There are {x} records in the data set")
 
 
-def serial_number(r):
+def serial_number():
     """
     Task 6: Read in the serial number of a record and return the serial number.
 
@@ -161,8 +162,9 @@ def serial_number(r):
     """
     # TODO: Your code here
 
-    for r in covid_records[0]:
-        print(r)
+    r = input("Please select a record between 1 and {}:\n".format(main.a()))
+    return r
+
 
 
 

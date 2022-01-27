@@ -26,6 +26,9 @@ from visual import *
 # TODO: Your code here
 
 covid_records = []
+def a():
+    y = len(covid_records)
+    return y
 
 
 def run():
@@ -58,6 +61,7 @@ def run():
         # Assign the selected option to a suitable local variable
         # TODO: Your code here
 
+
         option = tui.menu(0)
 
         # Task 15: Check if the user selected the option for processing data.  If so, then do the following:
@@ -71,15 +75,18 @@ def run():
         # - Use the appropriate function in the module 'tui' to display a menu of options for processing the data
         # (menu variant 1).
 
+
         if option == 1:
-            tui.progress("Operation has started", 0)
             if option == 1:
-                r = input("Please select a record between 1 and {}:\n".format(len(covid_records)))
-                tui.serial_number(r)
 
-            tui.progress("Operation has completed", 101)
-           # opt = tui.menu(variant=1)
 
+
+                tui.progress("Operation has started", 0)
+                if option == 1:
+                    p = int(tui.serial_number())
+                    print(covid_records[p-1])
+                tui.progress("Operation has completed", 101)
+                opt = tui.menu(variant=1)
 
         # - Check what option has been selected
         #
