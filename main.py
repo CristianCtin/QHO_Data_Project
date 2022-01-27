@@ -58,7 +58,7 @@ def run():
         # Assign the selected option to a suitable local variable
         # TODO: Your code here
 
-        option = tui.menu(variant=0)
+        option = tui.menu(0)
 
         # Task 15: Check if the user selected the option for processing data.  If so, then do the following:
         # - Use the appropriate function in the module tui to display a message to indicate that the data processing
@@ -73,8 +73,12 @@ def run():
 
         if option == 1:
             tui.progress("Operation has started", 0)
+            if option == 1:
+                r = input("Please select a record between 1 and {}:\n".format(len(covid_records)))
+                tui.serial_number(r)
+
             tui.progress("Operation has completed", 101)
-            opt = tui.menu(variant=1)
+           # opt = tui.menu(variant=1)
 
 
         # - Check what option has been selected
@@ -89,8 +93,7 @@ def run():
 
             if opt == 1:
                 tui.progress("Process has started", 0)
-                process.x()
-                print(x)
+
                 tui.progress("Process completed", 101)
 
 
@@ -118,7 +121,7 @@ def run():
         #       - Use the appropriate function in the module 'tui' to indicate that the grouping
         #       process has completed.
 
-            if opt == 3:
+            # if opt == 3:
 
 
 
@@ -167,9 +170,9 @@ def run():
         # module tui to display an error message
         # TODO: Your code here
 
-        pass  # can remove
+        # pass  # can remove
 
 
-if __name__ == "__main__":
-    run()
+# if __name__ == "__main__":
+run()
 

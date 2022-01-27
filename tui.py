@@ -6,7 +6,8 @@ A function may also need to format and/or structure a response e.g. return a lis
 Any errors or invalid inputs should be handled appropriately.
 Please note that you do not need to read the data file or perform any other such processing in this module.
 """
-
+import csv
+from main import *
 
 def welcome():
     """
@@ -115,6 +116,7 @@ def menu(variant=0):
               "\n2 = Records by Observation Date"
               "\n3 = Group Records by Country/Region"
               "\n4 = Summarise Records")
+        return variant
     elif variant == 2:
         print("\n1 = Country/Region Pie Chart"
               "\n2 = Observations Chart"
@@ -148,7 +150,7 @@ def total_records(num_records):
     print(f"There are {x} records in the data set")
 
 
-def serial_number():
+def serial_number(r):
     """
     Task 6: Read in the serial number of a record and return the serial number.
 
@@ -159,13 +161,9 @@ def serial_number():
     """
     # TODO: Your code here
 
-    with open("covid_19_data.csv") as database:
-        reader = csv.reader(database)
-        Serial_No = input("Enter a serial number :")
-        for SNo in reader:
-            if SNo[1] == Serial_No:
-                return SNo
-        print("Serial number not found!")
+    for r in covid_records[0]:
+        print(r)
+
 
 
 def observation_dates():

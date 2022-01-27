@@ -2,7 +2,7 @@
 This module is responsible for processing the data.  Each function in this module will take a list of records,
 process it and return the desired result.
 """
-
+import main
 from main import *
 from tui import *
 """
@@ -30,7 +30,10 @@ y = print(len(covid_records))
 - Retrieve a record with the serial number as specified by the user.
 """
 
-x = input("Please select a record between 1 and {}".format(len(covid_records)))
+def record():
+
+    x = input("Please select a record between 1 and {}:\n".format(len(covid_records)))
+    return x
 
 """
 - Retrieve the records for the observation dates as specified by the user.
