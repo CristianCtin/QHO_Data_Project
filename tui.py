@@ -126,6 +126,7 @@ def menu(variant=0):
         print("\n1 = All Data"
               "\n2 = Data for Specific Country/Region")
     elif variant == 4:
+        #break
         print("\nProgram closed")
     else:
         print("Invalid Option. Choose number from 1 to 4")
@@ -184,7 +185,7 @@ def observation_dates():
     obs_list = []
     while True:
         obs_dates = input("Enter observation dates (mm/dd/yyy) (To stop type stop): ")
-        if obs_dates  != "stop" :
+        if obs_dates != "stop":
             obs_list.append(obs_dates)
         else:
             break
