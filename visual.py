@@ -1,7 +1,7 @@
 """
 This module is responsible for visualising the data using Matplotlib.
 """
-
+import matplotlib.pyplot as plt
 """
 Task 22 - 24: Write suitable functions to visualise the data as follows:
 
@@ -14,3 +14,14 @@ Each function should visualise the data using Matplotlib.
 """
 
 # TODO: Your code here
+
+def cases_pie(region):
+    x = list(region.keys())
+    y = []
+    for keys in region.values():
+        y.append(len(keys))
+    plt.pie(x,y)
+    plt.show()
+
+
+def countries_bar(top):

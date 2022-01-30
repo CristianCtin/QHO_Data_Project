@@ -42,7 +42,6 @@ def record():
     - the total number of confirmed cases
     - the total number of deaths
     - the total number of recoveries
- 
 """
 
 # TODO: Your code here
